@@ -23,11 +23,11 @@ for row in csv_file:
         item.decompose()
     # Getting keyword ranking position results only from class 'yuRUbf' on Google.com
     results = soup.find_all('div', {'class': 'yuRUbf'})
-    #finding the ranking position of the website https://www.mygreatlearning.com 
+    #finding the ranking position of the website https://www.example.com 
     ranking_position = 0
     for result in results:
         link = result.find('a').get('href')
-        if link.startswith('https://www.mygreatlearning.com'):
+        if link.startswith('https://www.example.com'):
             ranking_position = results.index(result) + 1
             break
     #printing the results
