@@ -11,7 +11,7 @@ chrome_options.add_argument("--incognito")
 driver = webdriver.Chrome(options=chrome_options)
 
 #importing the keywords.csv file
-csv_file = csv.reader(open('ai-keywords.csv'))
+csv_file = csv.reader(open('keywords.csv'))
 for row in csv_file:
     keyword = row[0]
     driver.get('https://www.google.com/')
